@@ -1,5 +1,5 @@
-// Countdown to December 14, 2025 at 4:00 PM PST
-const eventDate = new Date('2025-12-14T16:00:00-08:00').getTime();
+// Countdown to December 13, 2025 at 4:00 PM PST
+const eventDate = new Date('2025-12-13T16:00:00-08:00').getTime();
 
 function updateCountdown() {
   const now = new Date().getTime();
