@@ -3,6 +3,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/js");
   eleventyConfig.addPassthroughCopy("src/assets");
+  eleventyConfig.addPassthroughCopy("src/CNAME");
 
   return {
     dir: {
@@ -15,5 +16,6 @@ module.exports = function(eleventyConfig) {
     devServer: {
       port: 3000
     }
+    // No pathPrefix - use root paths for custom domain or GitHub Pages root
   };
 };
