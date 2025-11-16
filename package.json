@@ -1,0 +1,16 @@
+{
+  "name": "acklerfest",
+  "version": "1.0.0",
+  "description": "AcklerFest - Semi-annual party website",
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve",
+    "start": "eleventy --serve"
+  },
+  "keywords": ["11ty", "eleventy", "party"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}

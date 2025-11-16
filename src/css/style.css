@@ -1,0 +1,415 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 40px 20px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.hero-image {
+  margin-bottom: 20px;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  max-height: 400px;
+  object-fit: cover;
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: #666;
+  font-weight: 300;
+}
+
+/* Section Styles */
+section {
+  background: white;
+  padding: 40px;
+  margin-bottom: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #764ba2;
+  border-bottom: 3px solid #667eea;
+  padding-bottom: 10px;
+}
+
+section h3 {
+  font-size: 1.5rem;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  color: #667eea;
+}
+
+/* Countdown Section */
+.countdown-section {
+  text-align: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.countdown-section h2 {
+  color: white;
+  border-bottom-color: rgba(255, 255, 255, 0.3);
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 30px 0;
+  flex-wrap: wrap;
+}
+
+.countdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 20px 30px;
+  border-radius: 10px;
+  min-width: 100px;
+}
+
+.countdown-number {
+  font-size: 3rem;
+  font-weight: 700;
+  display: block;
+}
+
+.countdown-label {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 5px;
+}
+
+.event-date {
+  font-size: 1.3rem;
+  margin-top: 20px;
+  font-weight: 500;
+}
+
+.event-note {
+  font-size: 1.1rem;
+  margin-top: 10px;
+  font-style: italic;
+  opacity: 0.9;
+}
+
+/* About Section */
+.about-section ul {
+  list-style-position: inside;
+  margin: 15px 0;
+  font-size: 1.1rem;
+}
+
+.about-section li {
+  margin: 10px 0;
+  padding-left: 10px;
+}
+
+/* Register Section */
+.register-section {
+  text-align: center;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+}
+
+.register-section h2 {
+  color: white;
+  border-bottom-color: rgba(255, 255, 255, 0.3);
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 18px 50px;
+  background: white;
+  color: #f5576c;
+  text-decoration: none;
+  border-radius: 50px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 20px 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.contact-info {
+  margin-top: 20px;
+  font-size: 1.1rem;
+}
+
+.contact-info a {
+  color: white;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+/* Donations Section */
+.donations-section {
+  text-align: center;
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  color: white;
+}
+
+.donations-section h2 {
+  color: white;
+  border-bottom-color: rgba(255, 255, 255, 0.3);
+}
+
+.payment-options {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 30px 0;
+  flex-wrap: wrap;
+}
+
+.payment-option {
+  flex: 1;
+  min-width: 200px;
+  max-width: 300px;
+}
+
+.payment-option h3 {
+  color: white;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.payment-button {
+  display: block;
+  padding: 15px 30px;
+  background: white;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.venmo-button {
+  color: #008CFF;
+}
+
+.cashapp-button {
+  color: #00D54B;
+}
+
+.payment-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.donations-section .note {
+  font-size: 1.1rem;
+  margin-top: 20px;
+  font-style: italic;
+  opacity: 0.95;
+}
+
+/* Directions Section */
+.location-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.address {
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+.map-link {
+  display: inline-block;
+  padding: 12px 30px;
+  background: #667eea;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.map-link:hover {
+  background: #764ba2;
+}
+
+/* Invitation Section */
+.invitation-section {
+  text-align: center;
+}
+
+.download-button {
+  display: inline-block;
+  padding: 15px 40px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.download-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Code of Conduct Section */
+.conduct-section {
+  background: #f8f9fa;
+  border-left: 5px solid #667eea;
+}
+
+.conduct-section ul {
+  list-style-position: inside;
+  margin: 15px 0;
+}
+
+.conduct-section li {
+  margin: 10px 0;
+  padding-left: 10px;
+}
+
+.conduct-section a {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.conduct-section a:hover {
+  text-decoration: underline;
+}
+
+.conduct-link {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 30px;
+  background: #667eea;
+  color: white !important;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.conduct-link:hover {
+  background: #764ba2;
+  text-decoration: none !important;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  color: #666;
+  margin-top: 30px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+  }
+
+  section {
+    padding: 25px;
+  }
+
+  section h2 {
+    font-size: 1.5rem;
+  }
+
+  .countdown {
+    gap: 15px;
+  }
+
+  .countdown-item {
+    padding: 15px 20px;
+    min-width: 80px;
+  }
+
+  .countdown-number {
+    font-size: 2rem;
+  }
+
+  .countdown-label {
+    font-size: 0.8rem;
+  }
+
+  .cta-button {
+    padding: 15px 35px;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .countdown-item {
+    padding: 10px 15px;
+    min-width: 70px;
+  }
+
+  .countdown-number {
+    font-size: 1.5rem;
+  }
+}
