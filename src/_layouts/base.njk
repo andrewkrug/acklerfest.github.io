@@ -5,6 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ title }} | AcklerFest</title>
   <link rel="stylesheet" href="/css/style.css">
+  <script>
+    (function(h,o,u,n,d) {
+      h=h[d]=h[d]||{q:[],onReady:function(c){h.q.push(c)}}
+      d=o.createElement(u);d.async=1;d.src=n
+      n=o.getElementsByTagName(u)[0];n.parentNode.insertBefore(d,n)
+    })(window,document,'script','https://www.datadoghq-browser-agent.com/us1/v6/datadog-rum.js','DD_RUM')
+    window.DD_RUM.onReady(function() {
+      window.DD_RUM.init({
+        clientToken: 'pubbe0ca10fe32aac1e79e0d49236f3e615',
+        applicationId: '96a75d5d-d199-4c79-91cc-1f7ea621e984',
+        site: 'datadoghq.com',
+        service: 'acklerfest.ing',
+        env: 'production',
+        sessionSampleRate: 100,
+        sessionReplaySampleRate: 20,
+        trackBfcacheViews: true,
+        defaultPrivacyLevel: 'mask-user-input',
+      });
+    })
+  </script>
 </head>
 <body>
   {{ content | safe }}
