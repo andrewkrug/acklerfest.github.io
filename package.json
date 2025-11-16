@@ -4,8 +4,8 @@
   "description": "AcklerFest - Semi-annual party website",
   "scripts": {
     "build": "eleventy",
-    "serve": "eleventy --serve",
-    "start": "eleventy --serve"
+    "serve": "eleventy --serve --port=3000",
+    "start": "eleventy --serve --port=3000"
   },
   "keywords": ["11ty", "eleventy", "party"],
   "author": "",

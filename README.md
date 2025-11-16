@@ -65,17 +65,22 @@ This will generate the static site in the `_site` directory.
 
 This site automatically deploys to GitHub Pages via GitHub Actions when you push to the `main` branch.
 
-### Setup GitHub Pages (one-time):
-1. Go to your repository settings
-2. Navigate to Pages (under Code and automation)
-3. Under "Build and deployment":
-   - Source: Select "GitHub Actions"
-4. Push your code to the `main` branch
+### Setup GitHub Pages (REQUIRED - one-time setup):
 
-The site will automatically build and deploy on every push to `main`.
+**You must enable GitHub Pages BEFORE the workflow will work:**
 
-### Manual Deployment:
-You can also trigger a manual deployment from the Actions tab in GitHub.
+1. Go to your repository settings: https://github.com/andrewkrug/acklerfest.github.io/settings/pages
+2. Under "Build and deployment":
+   - **Source**: Select "GitHub Actions" from the dropdown
+3. Click "Save" if needed
+4. Once enabled, push to the `main` branch or re-run the failed workflow
+
+**Important**: The deployment will fail with a 404 error if GitHub Pages is not enabled first.
+
+### After Setup:
+- The site will automatically build and deploy on every push to `main`
+- You can also trigger manual deployments from the Actions tab
+- Site will be available at: https://andrewkrug.github.io/acklerfest.github.io/
 
 ## Project Structure
 
