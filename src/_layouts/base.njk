@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ title }} | AcklerFest</title>
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#E891B2">
+  <link rel="apple-touch-icon" href="/assets/icon-192.png">
   <script>
     (function(h,o,u,n,d) {
       h=h[d]=h[d]||{q:[],onReady:function(c){h.q.push(c)}}
@@ -29,5 +32,10 @@
 <body>
   {{ content | safe }}
   <script src="/js/countdown.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js');
+    }
+  </script>
 </body>
 </html>

@@ -6,33 +6,72 @@
 }
 
 :root {
-  /* Winter/Christmas themed color palette */
-  --primary-red: #C41E3A;
-  --primary-green: #165B33;
-  --accent-gold: #D4AF37;
-  --accent-silver: #C0C0C0;
-  --dark-blue: #1a2332;
-  --light-cream: #FAF9F6;
-  --soft-white: #FFFFFF;
-  --text-dark: #2d3748;
-  --text-medium: #4a5568;
-  --gradient-festive: linear-gradient(135deg, #C41E3A 0%, #165B33 100%);
-  --gradient-winter: linear-gradient(135deg, #2c3e50 0%, #3498db 50%, #2c3e50 100%);
+  /* Spring pastel palette — light mode */
+  --primary-pink: #E891B2;
+  --primary-teal: #6EC6C6;
+  --accent-peach: #F4A97E;
+  --accent-lilac: #B8A9E8;
+  --bg-page: #FFF8F0;
+  --bg-card: #FFFFFF;
+  --bg-card-alt: #FFF0F5;
+  --text-primary: #3D3250;
+  --text-secondary: #6B5E7B;
+  --border-soft: rgba(232, 145, 178, 0.25);
+  --shadow-color: rgba(61, 50, 80, 0.08);
+  --shadow-heavy: rgba(61, 50, 80, 0.15);
+  --gradient-spring: linear-gradient(135deg, #E891B2 0%, #6EC6C6 100%);
+  --gradient-warm: linear-gradient(135deg, #F4A97E 0%, #E891B2 100%);
+  --gradient-cool: linear-gradient(135deg, #6EC6C6 0%, #B8A9E8 100%);
+  --white-overlay: rgba(255, 255, 255, 0.95);
+  --countdown-card-bg: rgba(255, 255, 255, 0.95);
+  --countdown-card-border: #fff;
+  --faq-bg: #FFF5F8;
+  --conduct-bg: #FFF0F5;
+  --lodging-card-text: #3D3250;
+  --footer-bg: #FFFFFF;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-pink: #D487A6;
+    --primary-teal: #5EB8B8;
+    --accent-peach: #E09870;
+    --accent-lilac: #A898D8;
+    --bg-page: #1A1525;
+    --bg-card: #241E32;
+    --bg-card-alt: #2A2238;
+    --text-primary: #EDE8F4;
+    --text-secondary: #B8AECA;
+    --border-soft: rgba(212, 135, 166, 0.2);
+    --shadow-color: rgba(0, 0, 0, 0.25);
+    --shadow-heavy: rgba(0, 0, 0, 0.4);
+    --gradient-spring: linear-gradient(135deg, #D487A6 0%, #5EB8B8 100%);
+    --gradient-warm: linear-gradient(135deg, #E09870 0%, #D487A6 100%);
+    --gradient-cool: linear-gradient(135deg, #5EB8B8 0%, #A898D8 100%);
+    --white-overlay: rgba(36, 30, 50, 0.95);
+    --countdown-card-bg: rgba(36, 30, 50, 0.95);
+    --countdown-card-border: #2A2238;
+    --faq-bg: #2A2238;
+    --conduct-bg: #2A2238;
+    --lodging-card-text: #EDE8F4;
+    --footer-bg: #241E32;
+  }
 }
 
 body {
   font-family: 'Georgia', 'Times New Roman', serif;
   line-height: 1.6;
-  color: var(--text-dark);
-  background: var(--dark-blue);
+  color: var(--text-primary);
+  background: var(--bg-page);
   background-image:
-    radial-gradient(circle at 20% 50%, rgba(196, 30, 58, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(22, 91, 51, 0.1) 0%, transparent 50%);
+    radial-gradient(circle at 20% 50%, rgba(232, 145, 178, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(110, 198, 198, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 50% 20%, rgba(184, 169, 232, 0.06) 0%, transparent 50%);
   min-height: 100vh;
   position: relative;
 }
 
-/* Snowflake effect */
+/* Subtle sparkle effect */
 body::before {
   content: '';
   position: fixed;
@@ -41,13 +80,13 @@ body::before {
   right: 0;
   bottom: 0;
   background-image:
-    radial-gradient(2px 2px at 20% 30%, white, transparent),
-    radial-gradient(2px 2px at 60% 70%, white, transparent),
-    radial-gradient(1px 1px at 50% 50%, white, transparent),
-    radial-gradient(1px 1px at 80% 10%, white, transparent),
-    radial-gradient(2px 2px at 90% 60%, white, transparent);
+    radial-gradient(2px 2px at 15% 25%, rgba(244, 169, 126, 0.4), transparent),
+    radial-gradient(2px 2px at 55% 65%, rgba(232, 145, 178, 0.35), transparent),
+    radial-gradient(1px 1px at 45% 45%, rgba(110, 198, 198, 0.35), transparent),
+    radial-gradient(1px 1px at 75% 15%, rgba(184, 169, 232, 0.3), transparent),
+    radial-gradient(2px 2px at 85% 55%, rgba(244, 169, 126, 0.3), transparent);
   background-size: 200% 200%;
-  opacity: 0.3;
+  opacity: 0.4;
   pointer-events: none;
   z-index: 0;
 }
@@ -64,17 +103,17 @@ body::before {
 .hero {
   text-align: center;
   padding: 50px 30px;
-  background: var(--soft-white);
+  background: var(--bg-card);
   background-image:
-    linear-gradient(45deg, rgba(196, 30, 58, 0.03) 25%, transparent 25%),
-    linear-gradient(-45deg, rgba(22, 91, 51, 0.03) 25%, transparent 25%);
+    linear-gradient(45deg, rgba(232, 145, 178, 0.04) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(110, 198, 198, 0.04) 25%, transparent 25%);
   background-size: 60px 60px;
   border-radius: 25px;
   margin-bottom: 40px;
   box-shadow:
-    0 20px 60px rgba(0, 0, 0, 0.3),
-    0 0 0 1px rgba(212, 175, 55, 0.2);
-  border: 3px solid var(--accent-gold);
+    0 20px 60px var(--shadow-heavy),
+    0 0 0 1px var(--border-soft);
+  border: 3px solid var(--accent-peach);
   position: relative;
   overflow: hidden;
 }
@@ -86,10 +125,10 @@ body::before {
   left: -2px;
   right: -2px;
   bottom: -2px;
-  background: var(--gradient-festive);
+  background: var(--gradient-spring);
   border-radius: 25px;
   z-index: -1;
-  opacity: 0.1;
+  opacity: 0.08;
 }
 
 .hero-image {
@@ -102,56 +141,60 @@ body::before {
   height: auto;
   border-radius: 20px;
   box-shadow:
-    0 10px 40px rgba(0, 0, 0, 0.4),
-    0 0 0 3px var(--accent-gold);
+    0 10px 40px var(--shadow-heavy),
+    0 0 0 3px var(--accent-peach);
   max-height: 450px;
   object-fit: cover;
-  border: 4px solid var(--soft-white);
+  border: 4px solid var(--bg-card);
 }
 
 .title {
   font-size: 4.5rem;
   font-weight: 900;
-  background: var(--gradient-festive);
+  background: var(--gradient-spring);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   margin-bottom: 15px;
   font-family: 'Georgia', serif;
   letter-spacing: -1px;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
   position: relative;
 }
 
 .subtitle {
   font-size: 1.8rem;
-  color: var(--primary-green);
+  color: var(--primary-teal);
   font-weight: 400;
   font-style: italic;
-  text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
   margin-bottom: 15px;
 }
 
 .slogan {
   font-size: 1.4rem;
-  color: var(--primary-red);
+  color: var(--primary-pink);
   font-weight: 600;
   font-style: italic;
   margin-top: 15px;
   padding: 15px 30px;
-  background: rgba(196, 30, 58, 0.1);
-  border-left: 4px solid var(--primary-red);
-  border-right: 4px solid var(--primary-green);
+  background: rgba(232, 145, 178, 0.08);
+  border-left: 4px solid var(--primary-pink);
+  border-right: 4px solid var(--primary-teal);
   border-radius: 8px;
   display: inline-block;
-  text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
   margin-bottom: 25px;
+}
+
+.event-theme {
+  font-size: 1.15rem;
+  color: var(--accent-lilac);
+  font-weight: 500;
+  margin-bottom: 10px;
 }
 
 .hero-cta-button {
   display: inline-block;
   padding: 18px 50px;
-  background: var(--primary-red);
+  background: var(--primary-pink);
   color: white;
   text-decoration: none;
   border-radius: 50px;
@@ -160,9 +203,9 @@ body::before {
   margin-top: 20px;
   transition: all 0.3s ease;
   box-shadow:
-    0 8px 25px rgba(196, 30, 58, 0.4),
-    0 0 0 4px white,
-    0 0 0 6px var(--accent-gold);
+    0 8px 25px rgba(232, 145, 178, 0.35),
+    0 0 0 4px var(--bg-card),
+    0 0 0 6px var(--accent-peach);
   text-transform: uppercase;
   letter-spacing: 1px;
   font-family: 'Georgia', serif;
@@ -172,31 +215,31 @@ body::before {
 .hero-cta-button:hover {
   transform: translateY(-5px) scale(1.05);
   box-shadow:
-    0 12px 35px rgba(196, 30, 58, 0.5),
-    0 0 0 4px white,
-    0 0 0 6px var(--accent-gold),
-    0 0 30px rgba(212, 175, 55, 0.6);
-  background: #a01729;
+    0 12px 35px rgba(232, 145, 178, 0.45),
+    0 0 0 4px var(--bg-card),
+    0 0 0 6px var(--accent-peach),
+    0 0 30px rgba(244, 169, 126, 0.4);
+  background: #D57DA0;
 }
 
 /* Section Styles */
 section {
-  background: var(--soft-white);
+  background: var(--bg-card);
   padding: 45px;
   margin-bottom: 35px;
   border-radius: 20px;
   box-shadow:
-    0 10px 30px rgba(0, 0, 0, 0.2),
-    0 0 0 1px rgba(212, 175, 55, 0.1);
-  border: 2px solid rgba(212, 175, 55, 0.3);
+    0 10px 30px var(--shadow-color),
+    0 0 0 1px var(--border-soft);
+  border: 2px solid var(--border-soft);
   position: relative;
 }
 
 section h2 {
   font-size: 2.5rem;
   margin-bottom: 25px;
-  color: var(--primary-red);
-  border-bottom: 4px solid var(--accent-gold);
+  color: var(--primary-pink);
+  border-bottom: 4px solid var(--accent-peach);
   padding-bottom: 15px;
   font-family: 'Georgia', serif;
   font-weight: 700;
@@ -211,49 +254,49 @@ section h2::after {
   left: 0;
   width: 60%;
   height: 4px;
-  background: var(--primary-green);
+  background: var(--primary-teal);
 }
 
 section h3 {
   font-size: 1.7rem;
   margin-top: 30px;
   margin-bottom: 15px;
-  color: var(--primary-green);
+  color: var(--primary-teal);
   font-weight: 700;
 }
 
 section p {
   font-size: 1.1rem;
   line-height: 1.8;
-  color: var(--text-dark);
+  color: var(--text-primary);
   font-weight: 400;
 }
 
 section ul {
-  color: var(--text-dark);
+  color: var(--text-primary);
   font-weight: 400;
 }
 
 section li {
-  color: var(--text-dark);
+  color: var(--text-primary);
   line-height: 1.7;
 }
 
 /* Countdown Section */
 .countdown-section {
   text-align: center;
-  background: var(--gradient-festive);
+  background: var(--gradient-spring);
   color: white;
-  border: 3px solid var(--accent-gold);
+  border: 3px solid var(--accent-peach);
   position: relative;
   overflow: hidden;
 }
 
 .countdown-section::before {
-  content: '❄';
+  content: '\2699';
   position: absolute;
   font-size: 15rem;
-  opacity: 0.05;
+  opacity: 0.08;
   top: -50px;
   right: -50px;
   transform: rotate(-15deg);
@@ -261,12 +304,16 @@ section li {
 
 .countdown-section h2 {
   color: white;
-  border-bottom-color: var(--accent-gold);
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  border-bottom-color: rgba(255, 255, 255, 0.5);
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.15);
 }
 
 .countdown-section h2::after {
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.countdown-section .event-theme {
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .countdown {
@@ -281,14 +328,14 @@ section li {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: rgba(255, 255, 255, 0.95);
+  background: var(--countdown-card-bg);
   padding: 25px 35px;
   border-radius: 15px;
   min-width: 110px;
   box-shadow:
-    0 8px 20px rgba(0, 0, 0, 0.3),
-    0 0 0 2px var(--accent-gold);
-  border: 3px solid var(--soft-white);
+    0 8px 20px rgba(0, 0, 0, 0.15),
+    0 0 0 2px var(--accent-peach);
+  border: 3px solid var(--countdown-card-border);
   transform: translateY(0);
   transition: transform 0.3s ease;
 }
@@ -301,7 +348,7 @@ section li {
   font-size: 3.5rem;
   font-weight: 900;
   display: block;
-  background: var(--gradient-festive);
+  background: var(--gradient-spring);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -313,7 +360,7 @@ section li {
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-top: 8px;
-  color: var(--primary-green);
+  color: var(--primary-teal);
   font-weight: 600;
 }
 
@@ -321,7 +368,7 @@ section li {
   font-size: 1.4rem;
   margin-top: 30px;
   font-weight: 600;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
   background: rgba(255, 255, 255, 0.2);
   padding: 15px 30px;
   border-radius: 10px;
@@ -333,7 +380,59 @@ section li {
   margin-top: 15px;
   font-style: italic;
   opacity: 0.95;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.calendar-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 25px;
+  flex-wrap: wrap;
+}
+
+.calendar-button {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 2px solid white;
+}
+
+.gcal-button {
+  background: rgba(255, 255, 255, 0.95);
+  color: #3D3250;
+}
+
+.ical-button {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.calendar-icon {
+  width: 1.1em;
+  height: 1.1em;
+  vertical-align: -0.15em;
+  margin-right: 6px;
+}
+
+.calendar-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+@media (prefers-color-scheme: dark) {
+  .gcal-button {
+    background: rgba(36, 30, 50, 0.95);
+    color: #EDE8F4;
+  }
+
+  .ical-button {
+    background: rgba(255, 255, 255, 0.1);
+  }
 }
 
 /* About Section */
@@ -341,42 +440,43 @@ section li {
   list-style: none;
   margin: 20px 0;
   font-size: 1.1rem;
-  color: var(--text-dark);
+  color: var(--text-primary);
 }
 
 .about-section li {
   margin: 12px 0;
   padding-left: 35px;
   position: relative;
-  color: var(--text-dark);
+  color: var(--text-primary);
   font-weight: 400;
 }
 
 .about-section li::before {
-  content: '🎄';
+  content: '\2727';
   position: absolute;
   left: 0;
   font-size: 1.2rem;
+  color: var(--accent-peach);
 }
 
 .about-section strong {
-  color: var(--primary-red);
+  color: var(--primary-pink);
   font-weight: 700;
 }
 
 /* Register Section */
 .register-section {
   text-align: center;
-  background: var(--primary-green);
-  background-image: linear-gradient(135deg, var(--primary-green) 0%, #0d3d21 100%);
+  background: var(--primary-teal);
+  background-image: linear-gradient(135deg, var(--primary-teal) 0%, #5AB5B5 100%);
   color: white;
-  border: 3px solid var(--accent-gold);
+  border: 3px solid var(--accent-peach);
 }
 
 .register-section h2 {
   color: white;
-  border-bottom-color: var(--accent-gold);
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  border-bottom-color: rgba(255, 255, 255, 0.4);
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.15);
 }
 
 .register-section h2::after {
@@ -386,15 +486,15 @@ section li {
 .register-section p {
   color: white;
   font-size: 1.2rem;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
   font-weight: 400;
 }
 
 .cta-button {
   display: inline-block;
   padding: 20px 60px;
-  background: var(--accent-gold);
-  color: var(--dark-blue);
+  background: var(--accent-peach);
+  color: white;
   text-decoration: none;
   border-radius: 50px;
   font-size: 1.4rem;
@@ -402,34 +502,33 @@ section li {
   margin: 25px 0;
   transition: all 0.3s ease;
   box-shadow:
-    0 8px 25px rgba(0, 0, 0, 0.3),
+    0 8px 25px rgba(0, 0, 0, 0.15),
     0 0 0 3px white;
   text-transform: uppercase;
   letter-spacing: 1px;
-  border: 4px solid var(--soft-white);
+  border: 4px solid white;
   font-family: 'Georgia', serif;
 }
 
 .cta-button:hover {
   transform: translateY(-5px) scale(1.05);
   box-shadow:
-    0 12px 35px rgba(0, 0, 0, 0.4),
+    0 12px 35px rgba(0, 0, 0, 0.2),
     0 0 0 3px white,
-    0 0 20px rgba(212, 175, 55, 0.5);
-  background: #f0c54d;
+    0 0 20px rgba(244, 169, 126, 0.4);
+  background: #E69568;
 }
 
 .contact-info {
   margin-top: 25px;
   font-size: 1.2rem;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
 }
 
 .contact-info a {
-  color: var(--accent-gold);
+  color: var(--accent-peach);
   text-decoration: none;
   font-weight: 700;
-  border-bottom: 2px solid var(--accent-gold);
+  border-bottom: 2px solid var(--accent-peach);
   transition: all 0.3s ease;
 }
 
@@ -441,15 +540,15 @@ section li {
 /* Donations Section */
 .donations-section {
   text-align: center;
-  background: linear-gradient(135deg, #165B33 0%, #22884a 100%);
+  background: var(--gradient-cool);
   color: white;
-  border: 3px solid var(--accent-silver);
+  border: 3px solid var(--accent-lilac);
 }
 
 .donations-section h2 {
   color: white;
-  border-bottom-color: var(--accent-silver);
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  border-bottom-color: rgba(255, 255, 255, 0.4);
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.15);
 }
 
 .donations-section h2::after {
@@ -459,7 +558,7 @@ section li {
 .donations-section p {
   color: white;
   font-size: 1.2rem;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
   font-weight: 400;
 }
 
@@ -486,13 +585,13 @@ section li {
 .payment-button {
   display: block;
   padding: 15px 30px;
-  background: white;
+  background: var(--bg-card);
   border-radius: 10px;
   text-decoration: none;
   font-weight: 700;
   font-size: 1.2rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
 }
 
 .venmo-button {
@@ -505,7 +604,7 @@ section li {
 
 .payment-button:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
 .donations-section .note {
@@ -517,15 +616,15 @@ section li {
 
 /* Lodging Section */
 .lodging-section {
-  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+  background: linear-gradient(135deg, var(--accent-lilac) 0%, #9B8AD4 100%);
   color: white;
-  border: 3px solid var(--accent-gold);
+  border: 3px solid var(--accent-peach);
 }
 
 .lodging-section h2 {
   color: white;
-  border-bottom-color: var(--accent-gold);
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  border-bottom-color: rgba(255, 255, 255, 0.4);
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.15);
 }
 
 .lodging-section h2::after {
@@ -535,7 +634,7 @@ section li {
 .lodging-section p {
   color: white;
   font-size: 1.2rem;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
 
 .lodging-options {
@@ -550,13 +649,13 @@ section li {
   flex: 1;
   min-width: 250px;
   max-width: 400px;
-  background: rgba(255, 255, 255, 0.95);
+  background: var(--white-overlay);
   padding: 30px;
   border-radius: 15px;
   box-shadow:
-    0 8px 20px rgba(0, 0, 0, 0.3),
-    0 0 0 3px var(--accent-gold);
-  border: 3px solid white;
+    0 8px 20px rgba(0, 0, 0, 0.15),
+    0 0 0 3px var(--accent-peach);
+  border: 3px solid var(--bg-card);
   transition: transform 0.3s ease;
 }
 
@@ -565,7 +664,7 @@ section li {
 }
 
 .lodging-option h3 {
-  color: var(--primary-red);
+  color: var(--primary-pink);
   font-size: 1.8rem;
   margin-top: 0;
   margin-bottom: 15px;
@@ -573,7 +672,7 @@ section li {
 }
 
 .lodging-option p {
-  color: var(--text-dark);
+  color: var(--lodging-card-text);
   font-size: 1.1rem;
   text-shadow: none;
 }
@@ -585,9 +684,9 @@ section li {
 }
 
 .lodging-contact a {
-  color: var(--accent-gold);
+  color: var(--accent-peach);
   text-decoration: none;
-  border-bottom: 2px solid var(--accent-gold);
+  border-bottom: 2px solid var(--accent-peach);
   font-weight: 700;
   transition: all 0.3s ease;
 }
@@ -612,7 +711,7 @@ section li {
 .map-link {
   display: inline-block;
   padding: 12px 30px;
-  background: #667eea;
+  background: var(--accent-peach);
   color: white;
   text-decoration: none;
   border-radius: 8px;
@@ -621,7 +720,7 @@ section li {
 }
 
 .map-link:hover {
-  background: #764ba2;
+  background: var(--accent-lilac);
 }
 
 /* Invitation Section */
@@ -632,7 +731,7 @@ section li {
 .download-button {
   display: inline-block;
   padding: 15px 40px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: var(--gradient-warm);
   color: white;
   text-decoration: none;
   border-radius: 8px;
@@ -640,71 +739,30 @@ section li {
   font-weight: 600;
   margin-top: 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 15px var(--shadow-color);
 }
 
 .download-button:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-}
-
-/* Code of Conduct Section */
-.conduct-section {
-  background: #f8f9fa;
-  border-left: 5px solid #667eea;
-}
-
-.conduct-section ul {
-  list-style-position: inside;
-  margin: 15px 0;
-}
-
-.conduct-section li {
-  margin: 10px 0;
-  padding-left: 10px;
-}
-
-.conduct-section a {
-  color: #667eea;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.conduct-section a:hover {
-  text-decoration: underline;
-}
-
-.conduct-link {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 30px;
-  background: #667eea;
-  color: white !important;
-  border-radius: 8px;
-  transition: background 0.3s ease;
-}
-
-.conduct-link:hover {
-  background: #764ba2;
-  text-decoration: none !important;
+  box-shadow: 0 8px 25px var(--shadow-heavy);
 }
 
 /* FAQ Section */
 .faq-section {
-  background: var(--soft-white);
+  background: var(--bg-card);
 }
 
 .faq-item {
   margin: 30px 0;
   padding: 25px;
-  background: var(--light-cream);
+  background: var(--faq-bg);
   border-radius: 12px;
-  border-left: 5px solid var(--primary-red);
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  border-left: 5px solid var(--primary-pink);
+  box-shadow: 0 3px 10px var(--shadow-color);
 }
 
 .faq-item h3 {
-  color: var(--primary-red);
+  color: var(--primary-pink);
   font-size: 1.5rem;
   margin-top: 0;
   margin-bottom: 15px;
@@ -719,21 +777,21 @@ section li {
 }
 
 .faq-item strong {
-  color: var(--primary-red);
+  color: var(--primary-pink);
   font-weight: 700;
 }
 
 .faq-item a {
-  color: var(--primary-green);
+  color: var(--primary-teal);
   text-decoration: none;
-  border-bottom: 2px solid var(--primary-green);
+  border-bottom: 2px solid var(--primary-teal);
   font-weight: 600;
   transition: all 0.3s ease;
 }
 
 .faq-item a:hover {
-  color: var(--primary-red);
-  border-bottom-color: var(--primary-red);
+  color: var(--primary-pink);
+  border-bottom-color: var(--primary-pink);
 }
 
 .faq-cta {
@@ -743,9 +801,9 @@ section li {
 
 /* Code of Conduct Section */
 .conduct-section {
-  background: var(--light-cream);
-  border-left: 6px solid var(--primary-red);
-  border-right: 6px solid var(--primary-green);
+  background: var(--conduct-bg);
+  border-left: 6px solid var(--primary-pink);
+  border-right: 6px solid var(--primary-teal);
 }
 
 .conduct-section ul {
@@ -760,47 +818,47 @@ section li {
 }
 
 .conduct-section li::before {
-  content: '✓';
+  content: '\2713';
   position: absolute;
   left: 0;
-  color: var(--primary-green);
+  color: var(--primary-teal);
   font-weight: 900;
   font-size: 1.3rem;
 }
 
 .conduct-section a {
-  color: var(--primary-red);
+  color: var(--primary-pink);
   text-decoration: none;
   font-weight: 700;
-  border-bottom: 2px solid var(--primary-red);
+  border-bottom: 2px solid var(--primary-pink);
   transition: all 0.3s ease;
 }
 
 .conduct-section a:hover {
-  color: var(--primary-green);
-  border-bottom-color: var(--primary-green);
+  color: var(--primary-teal);
+  border-bottom-color: var(--primary-teal);
 }
 
 .conduct-link {
   display: inline-block;
   margin-top: 25px;
   padding: 15px 40px;
-  background: var(--primary-red);
+  background: var(--primary-pink);
   color: white !important;
   border-radius: 10px;
   transition: all 0.3s ease;
-  border: 3px solid var(--primary-green);
+  border: 3px solid var(--primary-teal);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 15px var(--shadow-color);
 }
 
 .conduct-link:hover {
-  background: var(--primary-green);
-  border-color: var(--primary-red);
+  background: var(--primary-teal);
+  border-color: var(--primary-pink);
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 20px var(--shadow-heavy);
   text-decoration: none !important;
 }
 
@@ -808,12 +866,12 @@ section li {
 .footer {
   text-align: center;
   padding: 40px;
-  background: var(--soft-white);
+  background: var(--footer-bg);
   border-radius: 20px;
-  color: var(--text-dark);
+  color: var(--text-primary);
   margin-top: 40px;
-  border: 2px solid var(--accent-gold);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border: 2px solid var(--border-soft);
+  box-shadow: 0 10px 30px var(--shadow-color);
   font-size: 1.1rem;
 }
 

@@ -1,0 +1,12 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AcklerFest//EN
+BEGIN:VEVENT
+DTSTART:20260614T230000Z
+DTEND:20260615T063000Z
+SUMMARY:AcklerFest Summer 2026 – A Very Merry Unretirement
+DESCRIPTION:Celebrating Priscilla Oppenheimer's retirement from the SOU CS Department! Pot luck – bring food and drinks. Kids can pet the horse from 2pm.
+LOCATION:1075 Washburn Lane\, Medford\, OR 97501
+URL:https://acklerfest.ing
+END:VEVENT
+END:VCALENDAR

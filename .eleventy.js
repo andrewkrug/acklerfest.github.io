@@ -4,6 +4,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/js");
   eleventyConfig.addPassthroughCopy("src/assets");
   eleventyConfig.addPassthroughCopy("src/CNAME");
+  eleventyConfig.addPassthroughCopy({ "src/manifest.json": "manifest.json" });
+  eleventyConfig.addPassthroughCopy({ "src/sw.js": "sw.js" });
 
   return {
     dir: {
