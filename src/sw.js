@@ -1,4 +1,4 @@
-const CACHE_NAME = 'acklerfest-v1';
+const CACHE_NAME = 'acklerfest-v2';
 const ASSETS = [
   '/',
   '/css/style.css',

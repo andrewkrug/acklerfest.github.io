@@ -1,5 +1,5 @@
-// Countdown to June 14, 2026 at 4:00 PM PDT
-const eventDate = new Date('2026-06-14T16:00:00-07:00').getTime();
+// Countdown to December 12, 2026 at 4:00 PM PST
+const eventDate = new Date('2026-12-12T16:00:00-08:00').getTime();
 
 function updateCountdown() {
   const now = new Date().getTime();

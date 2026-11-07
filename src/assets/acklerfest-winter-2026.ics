@@ -1,0 +1,12 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AcklerFest//EN
+BEGIN:VEVENT
+DTSTART:20261213T000000Z
+DTEND:20261213T073000Z
+SUMMARY:AcklerFest Winter 2026 – Sleigh Overflow
+DESCRIPTION:The AcklerFest Christmas party! Pot luck – bring food and drinks. Ugly Sweater Contest. Kids can pet the horse from 2pm.
+LOCATION:1075 Washburn Lane\, Medford\, OR 97501
+URL:https://acklerfest.ing
+END:VEVENT
+END:VCALENDAR

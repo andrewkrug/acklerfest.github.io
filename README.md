@@ -5,8 +5,8 @@ A semi-annual party celebration website built with 11ty (Eleventy).
 ## About
 
 AcklerFest hosts two parties per year:
-- **Spring Party**: Date TBD for 2026
-- **Winter Party**: December 14, 2025
+- **Winter Party**: December 12, 2026 — "Sleigh Overflow"
+- **Summer Party**: Date TBD for 2027
 
 ## Features
 

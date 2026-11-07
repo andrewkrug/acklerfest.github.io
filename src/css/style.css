@@ -6,55 +6,55 @@
 }
 
 :root {
-  /* Spring pastel palette — light mode */
-  --primary-pink: #E891B2;
-  --primary-teal: #6EC6C6;
-  --accent-peach: #F4A97E;
-  --accent-lilac: #B8A9E8;
-  --bg-page: #FFF8F0;
-  --bg-card: #FFFFFF;
-  --bg-card-alt: #FFF0F5;
-  --text-primary: #3D3250;
-  --text-secondary: #6B5E7B;
-  --border-soft: rgba(232, 145, 178, 0.25);
-  --shadow-color: rgba(61, 50, 80, 0.08);
-  --shadow-heavy: rgba(61, 50, 80, 0.15);
-  --gradient-spring: linear-gradient(135deg, #E891B2 0%, #6EC6C6 100%);
-  --gradient-warm: linear-gradient(135deg, #F4A97E 0%, #E891B2 100%);
-  --gradient-cool: linear-gradient(135deg, #6EC6C6 0%, #B8A9E8 100%);
-  --white-overlay: rgba(255, 255, 255, 0.95);
-  --countdown-card-bg: rgba(255, 255, 255, 0.95);
+  /* Winter 2026 "Sleigh Overflow" palette — winter dusk: mulled wine, spruce teal, amber — light mode */
+  --primary-red: #8C3041;
+  --primary-green: #275D5B;
+  --accent-gold: #C9872E;
+  --accent-ice: #8FB3C9;
+  --bg-page: #F6EFE3;
+  --bg-card: #FFFDF8;
+  --bg-card-alt: #F3EEE2;
+  --text-primary: #33292E;
+  --text-secondary: #6A5C62;
+  --border-soft: rgba(140, 48, 65, 0.22);
+  --shadow-color: rgba(51, 41, 46, 0.08);
+  --shadow-heavy: rgba(51, 41, 46, 0.16);
+  --gradient-festive: linear-gradient(150deg, #46263E 0%, #8C3041 55%, #B06A28 100%);
+  --gradient-warm: linear-gradient(135deg, #C9872E 0%, #8C3041 100%);
+  --gradient-cool: linear-gradient(135deg, #275D5B 0%, #8FB3C9 100%);
+  --white-overlay: rgba(255, 253, 248, 0.95);
+  --countdown-card-bg: rgba(255, 253, 248, 0.95);
   --countdown-card-border: #fff;
-  --faq-bg: #FFF5F8;
-  --conduct-bg: #FFF0F5;
-  --lodging-card-text: #3D3250;
-  --footer-bg: #FFFFFF;
+  --faq-bg: #F7F0E1;
+  --conduct-bg: #EFEEE4;
+  --lodging-card-text: #33292E;
+  --footer-bg: #FFFDF8;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --primary-pink: #D487A6;
-    --primary-teal: #5EB8B8;
-    --accent-peach: #E09870;
-    --accent-lilac: #A898D8;
-    --bg-page: #1A1525;
-    --bg-card: #241E32;
-    --bg-card-alt: #2A2238;
-    --text-primary: #EDE8F4;
-    --text-secondary: #B8AECA;
-    --border-soft: rgba(212, 135, 166, 0.2);
+    --primary-red: #D97B8C;
+    --primary-green: #6FB3AE;
+    --accent-gold: #DBA54E;
+    --accent-ice: #9CC0D8;
+    --bg-page: #1C1420;
+    --bg-card: #271C2B;
+    --bg-card-alt: #2F2233;
+    --text-primary: #F1EAF0;
+    --text-secondary: #C2B2BD;
+    --border-soft: rgba(217, 123, 140, 0.2);
     --shadow-color: rgba(0, 0, 0, 0.25);
     --shadow-heavy: rgba(0, 0, 0, 0.4);
-    --gradient-spring: linear-gradient(135deg, #D487A6 0%, #5EB8B8 100%);
-    --gradient-warm: linear-gradient(135deg, #E09870 0%, #D487A6 100%);
-    --gradient-cool: linear-gradient(135deg, #5EB8B8 0%, #A898D8 100%);
-    --white-overlay: rgba(36, 30, 50, 0.95);
-    --countdown-card-bg: rgba(36, 30, 50, 0.95);
-    --countdown-card-border: #2A2238;
-    --faq-bg: #2A2238;
-    --conduct-bg: #2A2238;
-    --lodging-card-text: #EDE8F4;
-    --footer-bg: #241E32;
+    --gradient-festive: linear-gradient(150deg, #341C30 0%, #7A2A3C 55%, #9C5E22 100%);
+    --gradient-warm: linear-gradient(135deg, #DBA54E 0%, #7A2A3C 100%);
+    --gradient-cool: linear-gradient(135deg, #1F4A48 0%, #4E7C99 100%);
+    --white-overlay: rgba(39, 28, 43, 0.95);
+    --countdown-card-bg: rgba(39, 28, 43, 0.95);
+    --countdown-card-border: #2F2233;
+    --faq-bg: #2F2233;
+    --conduct-bg: #2F2233;
+    --lodging-card-text: #F1EAF0;
+    --footer-bg: #271C2B;
   }
 }
 
@@ -64,14 +64,14 @@ body {
   color: var(--text-primary);
   background: var(--bg-page);
   background-image:
-    radial-gradient(circle at 20% 50%, rgba(232, 145, 178, 0.08) 0%, transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(110, 198, 198, 0.08) 0%, transparent 50%),
-    radial-gradient(circle at 50% 20%, rgba(184, 169, 232, 0.06) 0%, transparent 50%);
+    radial-gradient(circle at 20% 50%, rgba(140, 48, 65, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(39, 93, 91, 0.07) 0%, transparent 50%),
+    radial-gradient(circle at 50% 20%, rgba(201, 135, 46, 0.06) 0%, transparent 50%);
   min-height: 100vh;
   position: relative;
 }
 
-/* Subtle sparkle effect */
+/* Subtle snowfall sparkle effect */
 body::before {
   content: '';
   position: fixed;
@@ -80,11 +80,11 @@ body::before {
   right: 0;
   bottom: 0;
   background-image:
-    radial-gradient(2px 2px at 15% 25%, rgba(244, 169, 126, 0.4), transparent),
-    radial-gradient(2px 2px at 55% 65%, rgba(232, 145, 178, 0.35), transparent),
-    radial-gradient(1px 1px at 45% 45%, rgba(110, 198, 198, 0.35), transparent),
-    radial-gradient(1px 1px at 75% 15%, rgba(184, 169, 232, 0.3), transparent),
-    radial-gradient(2px 2px at 85% 55%, rgba(244, 169, 126, 0.3), transparent);
+    radial-gradient(2px 2px at 15% 25%, rgba(201, 135, 46, 0.45), transparent),
+    radial-gradient(2px 2px at 55% 65%, rgba(255, 255, 255, 0.55), transparent),
+    radial-gradient(1px 1px at 45% 45%, rgba(143, 179, 201, 0.4), transparent),
+    radial-gradient(1px 1px at 75% 15%, rgba(255, 255, 255, 0.45), transparent),
+    radial-gradient(2px 2px at 85% 55%, rgba(201, 135, 46, 0.3), transparent);
   background-size: 200% 200%;
   opacity: 0.4;
   pointer-events: none;
@@ -105,15 +105,15 @@ body::before {
   padding: 50px 30px;
   background: var(--bg-card);
   background-image:
-    linear-gradient(45deg, rgba(232, 145, 178, 0.04) 25%, transparent 25%),
-    linear-gradient(-45deg, rgba(110, 198, 198, 0.04) 25%, transparent 25%);
+    linear-gradient(45deg, rgba(140, 48, 65, 0.04) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(39, 93, 91, 0.04) 25%, transparent 25%);
   background-size: 60px 60px;
   border-radius: 25px;
   margin-bottom: 40px;
   box-shadow:
     0 20px 60px var(--shadow-heavy),
     0 0 0 1px var(--border-soft);
-  border: 3px solid var(--accent-peach);
+  border: 3px solid var(--accent-gold);
   position: relative;
   overflow: hidden;
 }
@@ -125,7 +125,7 @@ body::before {
   left: -2px;
   right: -2px;
   bottom: -2px;
-  background: var(--gradient-spring);
+  background: var(--gradient-festive);
   border-radius: 25px;
   z-index: -1;
   opacity: 0.08;
@@ -142,7 +142,7 @@ body::before {
   border-radius: 20px;
   box-shadow:
     0 10px 40px var(--shadow-heavy),
-    0 0 0 3px var(--accent-peach);
+    0 0 0 3px var(--accent-gold);
   max-height: 450px;
   object-fit: cover;
   border: 4px solid var(--bg-card);
@@ -151,7 +151,7 @@ body::before {
 .title {
   font-size: 4.5rem;
   font-weight: 900;
-  background: var(--gradient-spring);
+  background: var(--gradient-festive);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -163,7 +163,7 @@ body::before {
 
 .subtitle {
   font-size: 1.8rem;
-  color: var(--primary-teal);
+  color: var(--primary-green);
   font-weight: 400;
   font-style: italic;
   margin-bottom: 15px;
@@ -171,14 +171,14 @@ body::before {
 
 .slogan {
   font-size: 1.4rem;
-  color: var(--primary-pink);
+  color: var(--primary-red);
   font-weight: 600;
   font-style: italic;
   margin-top: 15px;
   padding: 15px 30px;
   background: rgba(232, 145, 178, 0.08);
-  border-left: 4px solid var(--primary-pink);
-  border-right: 4px solid var(--primary-teal);
+  border-left: 4px solid var(--primary-red);
+  border-right: 4px solid var(--primary-green);
   border-radius: 8px;
   display: inline-block;
   margin-bottom: 25px;
@@ -186,7 +186,7 @@ body::before {
 
 .event-theme {
   font-size: 1.15rem;
-  color: var(--accent-lilac);
+  color: var(--accent-ice);
   font-weight: 500;
   margin-bottom: 10px;
 }
@@ -194,7 +194,7 @@ body::before {
 .hero-cta-button {
   display: inline-block;
   padding: 18px 50px;
-  background: var(--primary-pink);
+  background: var(--primary-red);
   color: white;
   text-decoration: none;
   border-radius: 50px;
@@ -203,9 +203,9 @@ body::before {
   margin-top: 20px;
   transition: all 0.3s ease;
   box-shadow:
-    0 8px 25px rgba(232, 145, 178, 0.35),
+    0 8px 25px rgba(140, 48, 65, 0.35),
     0 0 0 4px var(--bg-card),
-    0 0 0 6px var(--accent-peach);
+    0 0 0 6px var(--accent-gold);
   text-transform: uppercase;
   letter-spacing: 1px;
   font-family: 'Georgia', serif;
@@ -215,11 +215,11 @@ body::before {
 .hero-cta-button:hover {
   transform: translateY(-5px) scale(1.05);
   box-shadow:
-    0 12px 35px rgba(232, 145, 178, 0.45),
+    0 12px 35px rgba(140, 48, 65, 0.45),
     0 0 0 4px var(--bg-card),
-    0 0 0 6px var(--accent-peach),
-    0 0 30px rgba(244, 169, 126, 0.4);
-  background: #D57DA0;
+    0 0 0 6px var(--accent-gold),
+    0 0 30px rgba(201, 135, 46, 0.4);
+  background: #762837;
 }
 
 /* Section Styles */
@@ -238,8 +238,8 @@ section {
 section h2 {
   font-size: 2.5rem;
   margin-bottom: 25px;
-  color: var(--primary-pink);
-  border-bottom: 4px solid var(--accent-peach);
+  color: var(--primary-red);
+  border-bottom: 4px solid var(--accent-gold);
   padding-bottom: 15px;
   font-family: 'Georgia', serif;
   font-weight: 700;
@@ -254,14 +254,14 @@ section h2::after {
   left: 0;
   width: 60%;
   height: 4px;
-  background: var(--primary-teal);
+  background: var(--primary-green);
 }
 
 section h3 {
   font-size: 1.7rem;
   margin-top: 30px;
   margin-bottom: 15px;
-  color: var(--primary-teal);
+  color: var(--primary-green);
   font-weight: 700;
 }
 
@@ -285,15 +285,15 @@ section li {
 /* Countdown Section */
 .countdown-section {
   text-align: center;
-  background: var(--gradient-spring);
+  background: var(--gradient-festive);
   color: white;
-  border: 3px solid var(--accent-peach);
+  border: 3px solid var(--accent-gold);
   position: relative;
   overflow: hidden;
 }
 
 .countdown-section::before {
-  content: '\2699';
+  content: '\2744';
   position: absolute;
   font-size: 15rem;
   opacity: 0.08;
@@ -334,7 +334,7 @@ section li {
   min-width: 110px;
   box-shadow:
     0 8px 20px rgba(0, 0, 0, 0.15),
-    0 0 0 2px var(--accent-peach);
+    0 0 0 2px var(--accent-gold);
   border: 3px solid var(--countdown-card-border);
   transform: translateY(0);
   transition: transform 0.3s ease;
@@ -348,7 +348,7 @@ section li {
   font-size: 3.5rem;
   font-weight: 900;
   display: block;
-  background: var(--gradient-spring);
+  background: var(--gradient-festive);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -360,7 +360,7 @@ section li {
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-top: 8px;
-  color: var(--primary-teal);
+  color: var(--primary-green);
   font-weight: 600;
 }
 
@@ -403,8 +403,8 @@ section li {
 }
 
 .gcal-button {
-  background: rgba(255, 255, 255, 0.95);
-  color: #3D3250;
+  background: rgba(255, 253, 248, 0.95);
+  color: #33292E;
 }
 
 .ical-button {
@@ -426,8 +426,8 @@ section li {
 
 @media (prefers-color-scheme: dark) {
   .gcal-button {
-    background: rgba(36, 30, 50, 0.95);
-    color: #EDE8F4;
+    background: rgba(39, 28, 43, 0.95);
+    color: #F1EAF0;
   }
 
   .ical-button {
@@ -456,21 +456,21 @@ section li {
   position: absolute;
   left: 0;
   font-size: 1.2rem;
-  color: var(--accent-peach);
+  color: var(--accent-gold);
 }
 
 .about-section strong {
-  color: var(--primary-pink);
+  color: var(--primary-red);
   font-weight: 700;
 }
 
 /* Register Section */
 .register-section {
   text-align: center;
-  background: var(--primary-teal);
-  background-image: linear-gradient(135deg, var(--primary-teal) 0%, #5AB5B5 100%);
+  background: var(--primary-green);
+  background-image: linear-gradient(135deg, var(--primary-green) 0%, #1D4846 100%);
   color: white;
-  border: 3px solid var(--accent-peach);
+  border: 3px solid var(--accent-gold);
 }
 
 .register-section h2 {
@@ -493,7 +493,7 @@ section li {
 .cta-button {
   display: inline-block;
   padding: 20px 60px;
-  background: var(--accent-peach);
+  background: var(--accent-gold);
   color: white;
   text-decoration: none;
   border-radius: 50px;
@@ -515,8 +515,8 @@ section li {
   box-shadow:
     0 12px 35px rgba(0, 0, 0, 0.2),
     0 0 0 3px white,
-    0 0 20px rgba(244, 169, 126, 0.4);
-  background: #E69568;
+    0 0 20px rgba(201, 135, 46, 0.4);
+  background: #B3741F;
 }
 
 .contact-info {
@@ -525,10 +525,10 @@ section li {
 }
 
 .contact-info a {
-  color: var(--accent-peach);
+  color: var(--accent-gold);
   text-decoration: none;
   font-weight: 700;
-  border-bottom: 2px solid var(--accent-peach);
+  border-bottom: 2px solid var(--accent-gold);
   transition: all 0.3s ease;
 }
 
@@ -542,7 +542,7 @@ section li {
   text-align: center;
   background: var(--gradient-cool);
   color: white;
-  border: 3px solid var(--accent-lilac);
+  border: 3px solid var(--accent-ice);
 }
 
 .donations-section h2 {
@@ -616,9 +616,9 @@ section li {
 
 /* Lodging Section */
 .lodging-section {
-  background: linear-gradient(135deg, var(--accent-lilac) 0%, #9B8AD4 100%);
+  background: linear-gradient(135deg, var(--accent-ice) 0%, #5E88A6 100%);
   color: white;
-  border: 3px solid var(--accent-peach);
+  border: 3px solid var(--accent-gold);
 }
 
 .lodging-section h2 {
@@ -654,7 +654,7 @@ section li {
   border-radius: 15px;
   box-shadow:
     0 8px 20px rgba(0, 0, 0, 0.15),
-    0 0 0 3px var(--accent-peach);
+    0 0 0 3px var(--accent-gold);
   border: 3px solid var(--bg-card);
   transition: transform 0.3s ease;
 }
@@ -664,7 +664,7 @@ section li {
 }
 
 .lodging-option h3 {
-  color: var(--primary-pink);
+  color: var(--primary-red);
   font-size: 1.8rem;
   margin-top: 0;
   margin-bottom: 15px;
@@ -684,9 +684,9 @@ section li {
 }
 
 .lodging-contact a {
-  color: var(--accent-peach);
+  color: var(--accent-gold);
   text-decoration: none;
-  border-bottom: 2px solid var(--accent-peach);
+  border-bottom: 2px solid var(--accent-gold);
   font-weight: 700;
   transition: all 0.3s ease;
 }
@@ -711,7 +711,7 @@ section li {
 .map-link {
   display: inline-block;
   padding: 12px 30px;
-  background: var(--accent-peach);
+  background: var(--accent-gold);
   color: white;
   text-decoration: none;
   border-radius: 8px;
@@ -720,7 +720,7 @@ section li {
 }
 
 .map-link:hover {
-  background: var(--accent-lilac);
+  background: var(--accent-ice);
 }
 
 /* Invitation Section */
@@ -757,12 +757,12 @@ section li {
   padding: 25px;
   background: var(--faq-bg);
   border-radius: 12px;
-  border-left: 5px solid var(--primary-pink);
+  border-left: 5px solid var(--primary-red);
   box-shadow: 0 3px 10px var(--shadow-color);
 }
 
 .faq-item h3 {
-  color: var(--primary-pink);
+  color: var(--primary-red);
   font-size: 1.5rem;
   margin-top: 0;
   margin-bottom: 15px;
@@ -777,21 +777,21 @@ section li {
 }
 
 .faq-item strong {
-  color: var(--primary-pink);
+  color: var(--primary-red);
   font-weight: 700;
 }
 
 .faq-item a {
-  color: var(--primary-teal);
+  color: var(--primary-green);
   text-decoration: none;
-  border-bottom: 2px solid var(--primary-teal);
+  border-bottom: 2px solid var(--primary-green);
   font-weight: 600;
   transition: all 0.3s ease;
 }
 
 .faq-item a:hover {
-  color: var(--primary-pink);
-  border-bottom-color: var(--primary-pink);
+  color: var(--primary-red);
+  border-bottom-color: var(--primary-red);
 }
 
 .faq-cta {
@@ -802,8 +802,8 @@ section li {
 /* Code of Conduct Section */
 .conduct-section {
   background: var(--conduct-bg);
-  border-left: 6px solid var(--primary-pink);
-  border-right: 6px solid var(--primary-teal);
+  border-left: 6px solid var(--primary-red);
+  border-right: 6px solid var(--primary-green);
 }
 
 .conduct-section ul {
@@ -821,33 +821,33 @@ section li {
   content: '\2713';
   position: absolute;
   left: 0;
-  color: var(--primary-teal);
+  color: var(--primary-green);
   font-weight: 900;
   font-size: 1.3rem;
 }
 
 .conduct-section a {
-  color: var(--primary-pink);
+  color: var(--primary-red);
   text-decoration: none;
   font-weight: 700;
-  border-bottom: 2px solid var(--primary-pink);
+  border-bottom: 2px solid var(--primary-red);
   transition: all 0.3s ease;
 }
 
 .conduct-section a:hover {
-  color: var(--primary-teal);
-  border-bottom-color: var(--primary-teal);
+  color: var(--primary-green);
+  border-bottom-color: var(--primary-green);
 }
 
 .conduct-link {
   display: inline-block;
   margin-top: 25px;
   padding: 15px 40px;
-  background: var(--primary-pink);
+  background: var(--primary-red);
   color: white !important;
   border-radius: 10px;
   transition: all 0.3s ease;
-  border: 3px solid var(--primary-teal);
+  border: 3px solid var(--primary-green);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -855,8 +855,8 @@ section li {
 }
 
 .conduct-link:hover {
-  background: var(--primary-teal);
-  border-color: var(--primary-pink);
+  background: var(--primary-green);
+  border-color: var(--primary-red);
   transform: translateY(-3px);
   box-shadow: 0 8px 20px var(--shadow-heavy);
   text-decoration: none !important;
