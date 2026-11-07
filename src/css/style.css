@@ -747,6 +747,77 @@ section li {
   box-shadow: 0 8px 25px var(--shadow-heavy);
 }
 
+/* Social Graphics Section */
+.social-section {
+  text-align: center;
+}
+
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin: 35px 0 10px;
+}
+
+.social-card {
+  background: var(--bg-card-alt);
+  border: 2px solid var(--border-soft);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 5px 15px var(--shadow-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px var(--shadow-heavy);
+}
+
+.social-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid var(--accent-gold);
+  box-shadow: 0 3px 10px var(--shadow-color);
+}
+
+.social-card h3 {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-size: 1.3rem;
+  color: var(--primary-red);
+}
+
+.social-card .social-size {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-bottom: 15px;
+}
+
+.social-download {
+  display: inline-block;
+  padding: 10px 28px;
+  background: var(--primary-green);
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  border: 2px solid var(--accent-gold);
+}
+
+.social-download:hover {
+  background: var(--primary-red);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px var(--shadow-heavy);
+}
+
+.social-kit-cta {
+  margin-top: 25px;
+}
+
 /* FAQ Section */
 .faq-section {
   background: var(--bg-card);
