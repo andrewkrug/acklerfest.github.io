@@ -5,6 +5,16 @@ function updateCountdown() {
   const now = new Date().getTime();
   const distance = eventDate - now;
 
+  // If countdown is finished, show the final message and stop.
+  // Must happen before the DOM updates below: the countdown element's
+  // children are replaced here, so getElementById('days') etc. are null
+  // on subsequent ticks and would throw a TypeError every second.
+  if (distance < 0) {
+    document.getElementById('countdown').innerHTML = "<h3>The party has started!</h3>";
+    clearInterval(timer);
+    return;
+  }
+
   // Calculate time units
   const days = Math.floor(distance / (1000 * 60 * 60 * 24));
   const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -16,15 +26,10 @@ function updateCountdown() {
   document.getElementById('hours').textContent = hours;
   document.getElementById('minutes').textContent = minutes;
   document.getElementById('seconds').textContent = seconds;
-
-  // If countdown is finished
-  if (distance < 0) {
-    document.getElementById('countdown').innerHTML = "<h3>The party has started!</h3>";
-  }
 }
 
 // Update countdown every second
-setInterval(updateCountdown, 1000);
+const timer = setInterval(updateCountdown, 1000);
 
 // Initial call
 updateCountdown();

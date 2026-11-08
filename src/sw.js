@@ -23,6 +23,13 @@ self.addEventListener('activate', event => {
 });
 
 self.addEventListener('fetch', event => {
+  // Only handle same-origin GET requests. cache.put() rejects for POSTs
+  // and for non-http(s) URLs (e.g. chrome-extension://), which surfaced
+  // as unhandled promise rejections in the console.
+  if (event.request.method !== 'GET' || !event.request.url.startsWith(self.location.origin)) {
+    return;
+  }
+
   event.respondWith(
     fetch(event.request)
       .then(response => {

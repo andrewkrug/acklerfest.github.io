@@ -80,7 +80,7 @@ This site automatically deploys to GitHub Pages via GitHub Actions when you push
 ### After Setup:
 - The site will automatically build and deploy on every push to `main`
 - You can also trigger manual deployments from the Actions tab
-- Site will be available at: https://andrewkrug.github.io/acklerfest.github.io/
+- Site will be available at: https://acklerfest.ing/ (custom domain via `src/CNAME`; the github.io URL redirects to it)
 
 ## Project Structure
 
@@ -95,9 +95,16 @@ This site automatically deploys to GitHub Pages via GitHub Actions when you push
 │   │   └── countdown.js      # Countdown timer logic
 │   ├── assets/
 │   │   ├── hero-image.png    # Hero artwork
-│   │   └── winter_invite_2025.pdf  # Downloadable invitation
+│   │   ├── winter_invite_2026.pdf  # Downloadable invitation (linked from the page)
+│   │   ├── acklerfest-winter-2026.ics  # Apple Calendar download
+│   │   ├── participation.md  # Code of Conduct / participation guidelines
+│   │   └── social/           # Ready-to-post social media graphics
+│   ├── CNAME                 # Custom domain (acklerfest.ing)
+│   ├── manifest.json         # PWA manifest
+│   ├── sw.js                 # Service worker
 │   └── index.njk             # Home page
 ├── .eleventy.js              # 11ty configuration
+├── Makefile                  # Convenience commands (install/build/serve/clean)
 └── package.json              # Dependencies
 ```
 
